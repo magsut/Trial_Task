@@ -1,0 +1,31 @@
+.wrapper {
+    display: grid;
+    width: 98vw;
+    height: 98vh;
+    grid-gap: 5px;
+    grid-template-areas: "a b"
+                         "c d";
+    grid-template-columns: 1fr 1fr;
+
+
+}
+.one {
+    grid-area: a;
+    background: white;
+}
+.two {
+    grid-area: b;
+    background: red;
+}
+.three {
+    grid-area: c;
+    background: blue;
+}
+.four {
+    grid-area: d;
+    background: green;
+}
+input{
+    display: block;
+    margin-top: 8px;
+}
