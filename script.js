@@ -20,7 +20,7 @@ function checkValueOnSubmit(e){
 function checkValue(){
     let value = document.getVal.val.value;
 
-    let isWord = /^[A-Za-zА-Яа-я]+$/.test(value);
+    let isWord = /^[A-Za-zА-Яа-яёЁ]+$/.test(value);
     let isNumber = /^\d+$/.test(value);
 
     let newItem = true;
