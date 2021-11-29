@@ -1,27 +1,27 @@
-let wordsValue = [];
-let numbValue = [];
-let otherValue = [];
+let wordsValue = []; // массив буквенных значений
+let numbValue = []; // массив числовых значений
+let otherValue = []; // массив остальных значений
 
-class Value {
+class Value { // класс значения, хранит само значение и количество таких же значений, введенные пользователем
 
     constructor(value, count) {
         this.value = value;
         this.count = count;
     }
 
-    incCount(){this.count++}
+    incCount(){this.count++} // функция увеличения количества одинакового значения
 }
 
-function checkValueOnSubmit(e){
+function checkValueOnSubmit(e){ // функция перехвата запроса, изменения стандартного поведения и дальнейшей проверки значения
     e.preventDefault();
     checkValue();
 }
 
-function checkValue(){
-    let value = document.getVal.val.value;
+function checkValue(){ //функция проверки введенного значения и записи в нужный массив
+    let value = document.getVal.val.value; // получение введенного значения
 
-    let isWord = /^[A-Za-zА-Яа-яёЁ]+$/.test(value);
-    let isNumber = /^\d+$/.test(value);
+    let isWord = /^[A-Za-zА-Яа-яЁё]+$/.test(value); // проверка на только буквенное значение
+    let isNumber = /^\d+$/.test(value); // проверка на только числовое значение
 
     let newItem = true;
 
@@ -64,7 +64,7 @@ function checkValue(){
     }
 }
 
-function print(elements, id){
+function print(elements, id){ // функция вывода элементов в нужный блок
     if(elements.length > 0){
         let resultString = elements[0].value;
         if(elements[0].count > 1){
