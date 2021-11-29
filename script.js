@@ -12,10 +12,15 @@ class Value {
     incCount(){this.count++}
 }
 
+function checkValueOnSubmit(e){
+    e.preventDefault();
+    checkValue();
+}
+
 function checkValue(){
     let value = document.getVal.val.value;
 
-    let isWord = /^[A-Za-z]+$/.test(value);
+    let isWord = /^[A-Za-zА-Яа-я]+$/.test(value);
     let isNumber = /^\d+$/.test(value);
 
     let newItem = true;
@@ -70,7 +75,6 @@ function print(elements, id){
             if(elements[i].count > 1){
                 resultString += " (" + elements[i].count + ")";
             }
-            resultString += "</br>";
         }
         document.getElementById(id).innerHTML = resultString.toString();
     }

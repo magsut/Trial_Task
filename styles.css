@@ -1,8 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
 .wrapper {
     display: grid;
-    width: 98vw;
-    height: 98vh;
-    grid-gap: 5px;
+    width: 100vw;
+    height: 100vh;
+    /*grid-gap: 5px;*/
     grid-template-areas: "a b"
                          "c d";
     grid-template-columns: 1fr 1fr;
@@ -11,21 +18,35 @@
 }
 .one {
     grid-area: a;
+    height: 50vh;
     background: white;
 }
 .two {
     grid-area: b;
+    height: 50vh;
     background: red;
+    overflow-y: auto;
+
 }
 .three {
     grid-area: c;
+    height: 50vh;
     background: blue;
+    overflow-y: auto;
+
 }
 .four {
     grid-area: d;
+    height: 50vh    ;
     background: green;
+    overflow-y: auto;
+
 }
 input{
     display: block;
-    margin-top: 8px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+label{
+    margin-left: 5px;
 }
