@@ -66,11 +66,11 @@ function print(elements, id){
             resultString += " (" + elements[0].count + ")";
         }
         for(let i = 1; i < elements.length; i++){
-            resultString += "<p>" + elements[i].value.toString();
+            resultString += "<br>" + elements[i].value.toString();
             if(elements[i].count > 1){
                 resultString += " (" + elements[i].count + ")";
             }
-            resultString += "</p>";
+            resultString += "</br>";
         }
         document.getElementById(id).innerHTML = resultString.toString();
     }
