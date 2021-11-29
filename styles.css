@@ -9,12 +9,9 @@ body {
     display: grid;
     width: 100vw;
     height: 100vh;
-    /*grid-gap: 5px;*/
     grid-template-areas: "a b"
                          "c d";
     grid-template-columns: 1fr 1fr;
-
-
 }
 .one {
     grid-area: a;
@@ -26,21 +23,21 @@ body {
     height: 50vh;
     background: red;
     overflow-y: auto;
-
+    padding-left: 5px;
 }
 .three {
     grid-area: c;
     height: 50vh;
     background: blue;
     overflow-y: auto;
-
+    padding-left: 5px;
 }
 .four {
     grid-area: d;
     height: 50vh    ;
     background: green;
     overflow-y: auto;
-
+    padding-left: 5px;
 }
 input{
     display: block;
@@ -50,3 +47,4 @@ input{
 label{
     margin-left: 5px;
 }
+
